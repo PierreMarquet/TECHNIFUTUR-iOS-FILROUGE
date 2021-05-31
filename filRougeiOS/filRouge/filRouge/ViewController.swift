@@ -9,11 +9,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var greyView : UIView!
+    @IBOutlet var textEmail : UITextField!
+    @IBOutlet var textMDP : UITextField!
+    @IBOutlet var buttonConnect : UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setupView()
     }
 
-
+    func setupView(){
+        
+        greyView.backgroundColor = .gray
+        
+        textEmail.placeholder = "eMail"
+        textMDP.placeholder = "Mot de passe"
+        
+        buttonConnect.setTitle("Se connecter", for: .normal)
+        buttonConnect.backgroundColor = .blue
+        
+    }
+    
 }
 
